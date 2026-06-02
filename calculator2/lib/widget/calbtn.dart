@@ -5,7 +5,7 @@ class Calbtn extends StatelessWidget {
     super.key,
     required this.text,
     required this.callback,
-    this.bgColor = Colors.black54,
+    this.bgColor = Colors.black38,
   });
 
   final String text;
@@ -22,7 +22,9 @@ class Calbtn extends StatelessWidget {
       child: FloatingActionButton(
         backgroundColor: bgColor,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-        onPressed: () {},
+        onPressed: () {
+          callback(text);
+        },
         child: Text(text, style: TextStyle(color: Colors.white, fontSize: 24)),
       ),
     );
